@@ -40,6 +40,11 @@ set $runner_cmd rofi
 # set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 set $menu $runner_cmd -show combi -combi-modes drun#run -modes combi
 
+bindsym Print exec grimshot --notify save output "$HOME/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
+bindsym $mod+Print exec grimshot --notify save active "$HOME/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
+bindsym $mod+Shift+Print exec grimshot --notify save area "$HOME/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
+
+
 output * bg ~/Pictures/disco.png fill
 
 output HDMI-A-1 mode 1920x1080@120Hz pos 0 0 
@@ -248,3 +253,4 @@ include /etc/sway/config.d/*
 # Startup Programs
 
 exec_always gammastep
+exec_always dunst
