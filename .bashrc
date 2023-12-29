@@ -11,6 +11,14 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
+tmux_attach() {
+    if [[ -n $(pgrep tmux) ]]; then
+        tmux attach-session
+    else
+        tmux
+    fi
+}
+
 
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
@@ -47,7 +55,7 @@ alias pacre="sudo pacman -Rs"
 alias yain="yay -S"
 alias yare="yay -Rs"
 
-alias ta="tmux attach-session"
+alias ta=tmux_attach
 
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
