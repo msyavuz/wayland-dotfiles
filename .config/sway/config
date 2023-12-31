@@ -24,7 +24,7 @@ workspace 5 output eDP-1
 
 # Your preferred terminal emulator
 # Recommends: foot
-set $term foot
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -258,3 +258,4 @@ include /etc/sway/config.d/*
 
 exec_always gammastep
 exec_always dunst
+exec_always nm-applet
