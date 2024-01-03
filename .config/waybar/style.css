@@ -21,7 +21,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 2px 8px;
+    padding: 2px 0px;
     color: #fff;
 }
 
@@ -36,7 +36,6 @@ window#waybar {
     color: #24283b;
     border-radius: 5px;
 }
-
 
 #custom-date,
 #clock,
@@ -120,7 +119,6 @@ window#waybar {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     margin-right: 6px;
-
 }
 
 #memory {
@@ -153,7 +151,7 @@ window#waybar {
     padding: 0 10px;
 }
 
-#tray>* {
+#tray > * {
     padding: 0 2px;
     margin: 0 2px;
 }

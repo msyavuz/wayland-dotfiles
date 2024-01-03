@@ -51,6 +51,11 @@ output HDMI-A-1 mode 1920x1080@120Hz pos 0 0
 output eDP-1 mode 1920x1080@60Hz pos 1920 0 
 
 
+# Gaps
+
+# gaps outer 10
+# gaps inner 10
+
 # Hide title bars
 
 default_border none
@@ -259,3 +264,4 @@ include /etc/sway/config.d/*
 exec_always gammastep
 exec_always dunst
 exec_always nm-applet
+exec_always brightnessctl s 30%
