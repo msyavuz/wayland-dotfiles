@@ -39,6 +39,7 @@ set $runner_cmd rofi
 # TODO: add window with the next release of rofi-wayland
 # set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 set $menu $runner_cmd -show combi -combi-modes drun#run -modes combi
+set $power $runner_cmd -show power-menu -modi power-menu:rofi-power-menu
 
 bindsym Print exec grimshot --notify save output "$HOME/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
 bindsym $mod+Print exec grimshot --notify save active "$HOME/Screenshots/$(date '+%y%m%d_%H-%M-%S').png"
@@ -103,6 +104,8 @@ input "type:keyboard" {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    bindsym $mod+Shift+e exec $power
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
